@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "nvwa-desktop/src-tauri",
+    "nvwa-rs",
+    # "ipix-ios"
+]
+[patch.crates-io]
+nvwa-desktop = { path = "./nvwa-desktop/src-tauri" }
+nvwa-rs = {path = "./nvwa-rs"}
+# ipix-ios = {path = "./ipix-ios"}
+
+[profile.release]
+strip = true 
+lto = true
+opt-level = "s"
